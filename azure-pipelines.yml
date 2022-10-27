@@ -90,12 +90,12 @@ stages:
 
 - stage: 'Test'
   displayName: 'Deploy to the test environment'
-  dependsOn: Dev
+  dependsOn: desarrollo
   jobs:
   - deployment: Deploy
     pool:
       vmImage: 'ubuntu-20.04'
-    environment: test
+    environment: prueba
     variables:
     - group: 'Release'
     strategy:
